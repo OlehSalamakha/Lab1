@@ -46,10 +46,9 @@
                             android:layout_height="wrap_content"/>
                     </RadioGroup>
                     <ImageView
-                        android:id="@+id/image_view2"
+                        android:id="@+id/image_view1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/images"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -69,10 +68,9 @@
                             android:layout_height="wrap_content"/>
                     </RadioGroup>
                     <ImageView
-                        android:id="@+id/image_view3"
+                        android:id="@+id/image_view2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/images"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -92,10 +90,9 @@
                             android:layout_height="wrap_content"/>
                     </RadioGroup>
                     <ImageView
-                        android:id="@+id/image_view4"
+                        android:id="@+id/image_view3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/images"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -115,10 +112,9 @@
                     </RadioGroup>
                     <ImageView
 
-                        android:id="@+id/image_view1"
+                        android:id="@+id/image_view4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/images"/>
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
@@ -126,10 +122,19 @@
 
 
         <Button
+            android:id="@+id/next_btn"
             android:layout_marginLeft="60dp"
             android:layout_width="211dp"
             android:layout_height="wrap_content"
             android:text="Next question..." />
+
+        <Button
+            android:id="@+id/result_btn"
+            android:layout_marginLeft="60dp"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:text="Get result"
+            android:enabled="false"/>
 
 
 

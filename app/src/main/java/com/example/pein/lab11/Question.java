@@ -1,35 +1,41 @@
 package com.example.pein.lab11;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Dictionary;
+import android.util.Log;
+
+import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by pein on 3/17/15.
- */
+
 public class Question {
-    private Dictionary<String, Integer> mVariants;
-    public Question(Dictionary<String, Integer> variants) {
-        mVariants = variants;
+    private List<Integer> mAnswers = new LinkedList<Integer>();
+    private List<String> mImages = new LinkedList<String>();
+    private int mAnswer = -1;
+    private int mIndexOfAnswer = -1;
+    public Question(int a1, int a2, int a3, int a4) {
+        mAnswer = -1;
+        mAnswers.clear();
+        mAnswers.add(a1);
+        mAnswers.add(a2);
+        mAnswers.add(a3);
+        mAnswers.add(a4);
+
+    }
+
+    public Question(List<Integer> a) {
+        mAnswer = -1;
+        mAnswers.clear();
+        mAnswers.addAll(a);
+    }
+
+    public int getAnswer() {
+        Log.d("Quest", "Get answer: " + Integer.toString(mAnswer));
+        return mAnswer;
+    }
+
+    public void setAnswer(int index) {
+        mAnswer = mAnswers.get(index);
+        mIndexOfAnswer = index;
     }
 
 
-    public List<String> getNameOfImage() {
-        List<String> result =  Collections.list(mVariants.keys());
-        return result;
-    }
-
-    public List<Integer> getPoints() {
-        List<Integer> result = Collections.list(mVariants.elements());
-        return result;
-    }
-
-    public Dictionary<String, Integer> getQuestion() {
-        return mVariants;
-    }
-
-    public int getPoint(String key) {
-        return mVariants.get(key);
-    }
 }
